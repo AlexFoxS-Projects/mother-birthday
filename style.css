@@ -53,8 +53,6 @@ body {
 .gift-svg {
   width: 160px;
   height: 160px;
-  filter:
-    drop-shadow(0 15px 25px rgba(0, 0, 0, 0.5)) drop-shadow(0 25px 45px rgba(0, 0, 0, 0.3)) drop-shadow(0 5px 15px rgba(255, 165, 0, 0.4));
   transform-style: preserve-3d;
   transition: transform 0.3s ease;
 }
