@@ -46,6 +46,7 @@ function openGift() {
     document.getElementById("letter").classList.remove("is-hidden");
 
     confetti({
+      ticks: 300,
       particleCount: 120,
       spread: 80,
       origin: { y: 0.6 },
