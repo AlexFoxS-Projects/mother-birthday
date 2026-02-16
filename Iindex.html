@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>С Днём рождения, мама 💜</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Manrope:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml"
+    href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" font-size="90">🎁</text></svg>'>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script type="module">
+    import { Fireworks } from 'https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.es.js'
+    window.Fireworks = Fireworks
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <canvas id="fireworks-canvas"></canvas>
+  <div class="gift-container" id="giftBox" onclick="openGift()">
+    <img class="gift-svg" src="present.png" alt="Gift">
+
+    <!-- <svg class="gift-svg" viewBox="0 0 200 200">
+    <defs>
+      <linearGradient id="boxFront" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFC830"/>
+        <stop offset="100%" stop-color="#F0A000"/>
+      </linearGradient>
+
+      <linearGradient id="boxSide" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#E09800"/>
+        <stop offset="100%" stop-color="#D08800"/>
+      </linearGradient>
+      
+      <linearGradient id="lidTop" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFD040"/>
+        <stop offset="100%" stop-color="#FFC020"/>
+      </linearGradient>
+
+      <linearGradient id="ribbonMain" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#E84855"/>
+        <stop offset="50%" stop-color="#D63947"/>
+        <stop offset="100%" stop-color="#C42A38"/>
+      </linearGradient>
+      
+      <linearGradient id="ribbonDark" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#C42A38"/>
+        <stop offset="100%" stop-color="#A0222D"/>
+      </linearGradient>
+      
+      <radialGradient id="bowLight">
+        <stop offset="0%" stop-color="#FF7B88"/>
+        <stop offset="100%" stop-color="#E84855"/>
+      </radialGradient>
+    </defs>
+
+    <path d="M45 95 L45 160 L85 175 L85 110 Z" 
+          fill="url(#boxSide)" 
+          stroke="#B87800" 
+          stroke-width="0.5"/>
+
+    <path d="M85 110 L85 175 L115 175 L115 110 Z" 
+          fill="url(#boxFront)" 
+          stroke="#D08800" 
+          stroke-width="0.5"/>
+
+    <path d="M115 110 L115 175 L155 160 L155 95 Z" 
+          fill="url(#boxSide)" 
+          stroke="#B87800" 
+          stroke-width="0.5"/>
+
+    <path d="M40 85 L100 65 L160 85 L100 105 Z" 
+          fill="url(#lidTop)" 
+          stroke="#D08800" 
+          stroke-width="0.5"/>
+    
+    <path d="M40 85 L40 95 L80 110 L80 100 Z" 
+          fill="url(#boxSide)" 
+          stroke="#B87800" 
+          stroke-width="0.5"/>
+    
+    <path d="M80 100 L80 110 L120 110 L120 100 Z" 
+          fill="url(#boxFront)" 
+          stroke="#D08800" 
+          stroke-width="0.5"/>
+
+    <path d="M120 100 L120 110 L160 95 L160 85 Z" 
+          fill="url(#boxSide)" 
+          stroke="#B87800" 
+          stroke-width="0.5"/>
+
+    <path d="M40 85 L100 65 L160 85 L160 92 L100 72 L40 92 Z" 
+          fill="url(#ribbonMain)" 
+          stroke="#A0222D" 
+          stroke-width="0.8"/>
+
+    <path d="M95 65 L95 175 L100 178 L100 68 Z" 
+          fill="url(#ribbonDark)" 
+          stroke="#A0222D" 
+          stroke-width="0.5"/>
+    
+    <path d="M100 68 L100 178 L105 175 L105 65 Z" 
+          fill="url(#ribbonMain)" 
+          stroke="#A0222D" 
+          stroke-width="0.5"/>
+
+    <ellipse cx="65" cy="60" rx="28" ry="18" 
+             fill="url(#bowLight)" 
+             stroke="#C42A38" 
+             stroke-width="2"/>
+    <ellipse cx="65" cy="60" rx="22" ry="14" 
+             fill="#FF8A95" 
+             opacity="0.6"/>
+    
+    <ellipse cx="135" cy="60" rx="28" ry="18" 
+             fill="url(#bowLight)" 
+             stroke="#C42A38" 
+             stroke-width="2"/>
+    <ellipse cx="135" cy="60" rx="22" ry="14" 
+             fill="#FF8A95" 
+             opacity="0.6"/>
+    
+    <circle cx="100" cy="63" r="11" 
+            fill="#E84855" 
+            stroke="#A0222D" 
+            stroke-width="1.5"/>
+    <circle cx="100" cy="63" r="8" 
+            fill="#FF7B88" 
+            opacity="0.7"/>
+
+    <ellipse cx="100" cy="182" rx="55" ry="8" 
+             fill="rgba(0,0,0,0.25)"/>
+  </svg> -->
+  </div>
+  <div class="letter is-hidden" id="letter" onclick="openLetter()">
+    <div class="letter-envelope">
+      <div class="letter-content">
+        <div class="letter-heart">💜</div>
+        <h1>С Днём рождения</h1>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="poem" id="poem">
+    <div class="poem-card">
+      <div class="poem-text">
+        Мамочка милая, нежная, родная,<br />
+        Солнце моё и душа золотая.<br />
+        Пусть улыбается жизнь для тебя,<br />
+        Крепко-крепко люблю я тебя 💜
+      </div>
+
+      <div class="subtitle">
+        Поздравляю тебя с 52-летием!
+      </div>
+
+      <!-- <div class="music-indicator">
+        <div class="music-wave">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        Музыка играет
+      </div> -->
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="birthday-song.mp3" type="audio/mpeg" />
+  </audio>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
