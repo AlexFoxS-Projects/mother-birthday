@@ -13,7 +13,7 @@ setTimeout(() => {
       delay: { min: 44.52, max: 74.52 },
       explosion: 8,
       flickering: 50,
-      intensity: 15,
+      intensity: 10,
       friction: 0.97,
       gravity: 1.5,
       opacity: 0.7,
